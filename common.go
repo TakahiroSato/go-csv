@@ -101,10 +101,17 @@ func (wo *Dialect) setDefaults() {
 
 func isNumeric(s string) bool {
 	if len(s) == 0 {
-		return false
+		return true
 	}
+	dotCount := 0
 	for _, r := range s {
 		if r != '.' && !unicode.IsDigit(r) {
+			return false
+		}
+		if r == '.' {
+			dotCount++
+		}
+		if dotCount > 1 {
 			return false
 		}
 	}
