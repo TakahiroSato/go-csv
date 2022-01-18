@@ -1,3 +1,3 @@
-module github.com/JensRantil/go-csv
+module github.com/TakahiroSato/go-csv
 
 go 1.14
