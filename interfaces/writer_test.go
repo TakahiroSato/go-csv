@@ -6,8 +6,9 @@ package interfaces
 import (
 	"bytes"
 	oldcsv "encoding/csv"
-	thiscsv "github.com/JensRantil/go-csv"
 	"testing"
+
+	thiscsv "github.com/TakahiroSato/go-csv"
 )
 
 func TestWriterInterface(t *testing.T) {

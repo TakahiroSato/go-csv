@@ -13,7 +13,7 @@ import (
 	"testing"
 	"testing/quick"
 
-	"github.com/JensRantil/go-csv/interfaces"
+	"github.com/TakahiroSato/go-csv/interfaces"
 )
 
 func testReadingSingleLine(t *testing.T, r *Reader, expected []string) error {

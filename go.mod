@@ -1,3 +1,3 @@
 module github.com/TakahiroSato/go-csv
 
-go 1.14
+go 1.17

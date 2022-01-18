@@ -2,9 +2,10 @@ package dialect_test
 
 import (
 	"flag"
-	csv "github.com/JensRantil/go-csv"
-	"github.com/JensRantil/go-csv/dialect"
 	"os"
+
+	csv "github.com/TakahiroSato/go-csv"
+	"github.com/TakahiroSato/go-csv/dialect"
 )
 
 func Example_flag() {

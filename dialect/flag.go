@@ -3,15 +3,16 @@
 
 // Helpers that makes it easy to build CSV dialects.  This API is currently in
 // alpha. Feel free to discuss it on
-// https://github.com/jensrantil/go-csv/issues.
+// https://github.com/TakahiroSato/go-csv/issues.
 package dialect
 
 import (
 	"errors"
 	"flag"
-	csv "github.com/JensRantil/go-csv"
 	"strings"
 	"unicode/utf8"
+
+	csv "github.com/TakahiroSato/go-csv"
 )
 
 type DialectBuilder struct {
