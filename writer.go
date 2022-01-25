@@ -142,6 +142,26 @@ func (w Writer) Write(record []string) (err error) {
 	return
 }
 
+func (w Writer) WriteWithLength(record []string, length int) (err error) {
+	for n, field := range record {
+		if n != 0 {
+			if err = w.writeDelimiter(); err != nil {
+				return
+			}
+		}
+		if err = w.writeField(field); err != nil {
+			return
+		}
+	}
+	for i := 0; i < length-len(record); i++ {
+		if err = w.writeDelimiter(); err != nil {
+			return
+		}
+	}
+	err = w.writeNewline()
+	return
+}
+
 // WriteAll writes multiple CSV records to w using Write and then calls Flush.
 func (w Writer) WriteAll(records [][]string) (err error) {
 	for _, record := range records {
